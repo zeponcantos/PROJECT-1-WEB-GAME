@@ -3,10 +3,6 @@ var player = 0;
 var player_cards = [];
 var dealer_cards = [];
 
-var dealerAceTotal = 0;
-var playerAceTotal = 0;
-
-var hidden;
 var deck = [];
 var player_turn = true;
 
@@ -54,12 +50,14 @@ function buildDeck(){
 function drawCard(isPlayer) {
     // gets first character "value" of the card
     var randomCardValue = deck[(Math.floor(Math.random() * deck.length))]; 
+    // handle images to show on div element
     if (isPlayer) {
         player_cards.push(randomCardValue + ".png");
     }
     else {
         dealer_cards.push(randomCardValue + ".png");
     }
+    // Check card value
     switch (randomCardValue[0]) {
         case "A":
             if (isPlayer) {
