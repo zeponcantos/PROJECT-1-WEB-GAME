@@ -1,22 +1,29 @@
 html {
-    background: rgb(252, 252, 252);
-
+    background: rgb(239, 239, 239);
 }
+
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
+    background-image: url("https://images.unsplash.com/photo-1675503855766-cdf53a0ee24b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 100px 100px 320px;
+    color: white;
+    
 }
 
 #player-cards img{
     height: 250px;
     width: 175px;
-    margin:1px;
+    margin:20px;
 }
 
 #dealer-cards img{
     height: 250px;  
     width: 175px;
-    margin:1px;
+    margin:20px;
 }
 #hit-button{
     height: 60px;
