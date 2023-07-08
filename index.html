@@ -8,9 +8,9 @@
     <script src="app.js"></script>
 </head>
 
+
 <body>
-    <h1 id="mainTitle">Black Jack </h1>
-       
+    <h1 id="mainTitle">Black Jack </h1>   
     <h2>Dealer: <span id="dealer-total"></span></h2>
         <div id="dealer-cards"></div>
     
@@ -23,4 +23,25 @@
 
     </body>
     <button id="restart-button" onclick="startGame()">Start Over</button>
+    <div class="GameRules"id="Rules">
+        <h2> Rules </h2>
+            <li>
+                <span> Hitting 21 = Win $ BLACK JACK $ </span>
+            </li>
+            <li>
+                <span> Hitting > 21 = loss </span>
+            </li>
+            <li>
+                <span> Numerical Cards 1-10 = Face Value</span>
+            </li>
+            <li>
+                <span> Ace = 1/11 </span>
+            </li>
+            <li>
+                <span> Face Cards = 10</span>
+            </li>
+            <li>
+                <span> **Dealer wont hit/stays if > 17 </span>
+            </li>
+    </div>
 </html>
