@@ -89,3 +89,15 @@ function drawCard(isPlayer) {
     }
 }
 
+// Player helper methods
+function hit() {
+    if (player_turn) {
+        player += drawCard(true);
+        if (player >= 21) {
+            player_turn = false;
+        }
+    }
+}
+function stand() {
+    player_turn = false;
+}
