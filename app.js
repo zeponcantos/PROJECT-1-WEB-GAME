@@ -1,5 +1,5 @@
-var dealerTotal = 0;
-var playerTotal = 0;
+var dealer = 0;
+var player = 0;
 var player_cards = [];
 var dealer_cards = [];
 
