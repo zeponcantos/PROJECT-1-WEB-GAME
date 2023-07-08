@@ -101,3 +101,39 @@ function hit() {
 function stand() {
     player_turn = false;
 }
+
+function check_turn() {
+    if (!player_turn) {
+        if (player > 21) {
+            return;
+        }
+        if (player == 21) {
+            return;
+        }
+        while (dealer < 17) {
+            dealer += drawCard(false);
+        }
+        calculateScore(player, dealer)
+    }
+}
+
+function calculateScore(player_score, dealer_score) {
+    if (player_score > 21) {
+        document.getElementById("end-game").innerText = "LOSS";
+        load_dealer_cards();
+    }
+    if (dealer_score > 21 && player_score <= 21) {
+        document.getElementById("end-game").innerText = "WIN";
+    }
+    else if (player_score > dealer_score && player_score <= 21) {
+        document.getElementById("end-game").innerText = "WIN";
+    }
+    else if (dealer_score > player_score && dealer_score <= 21) {
+        document.getElementById("end-game").innerText = "LOSS";
+        load_dealer_cards();
+    }
+    else if (player_score == dealer_score) {
+        document.getElementById("end-game").innerText = "TIE"
+        load_dealer_cards();
+    }
+}
