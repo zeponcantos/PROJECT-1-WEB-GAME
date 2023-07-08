@@ -26,6 +26,8 @@ function initialize_game() {
     player += drawCard(true) + drawCard(true);
     dealer += drawCard(false);
     player_turn = true;
+    load_dealer_cards();
+    load_player_cards(); 
 }
 
 function startGame() {
