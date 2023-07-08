@@ -27,6 +27,10 @@ function initialize_game() {
     dealer += drawCard(false);
     player_turn = true;
     load_dealer_cards();
+    const container = document.getElementById('dealer-cards'); 
+    const img = document.createElement('img');
+    img.src = "./Blackjack-cards/BACK.png";
+    container.appendChild(img);
     load_player_cards(); 
 }
 
