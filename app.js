@@ -1,5 +1,7 @@
 var dealerTotal = 0;
 var playerTotal = 0;
+var player_cards = [];
+var dealer_cards = [];
 
 var dealerAceTotal = 0;
 var playerAceTotal = 0;
@@ -10,8 +12,25 @@ var player_turn = true;
 
 var allowHit = true; 
 window.onload = function(){
+    startGame();
+}
+
+function initialize_game() {
+    deck = [];
+    dealer_cards = [];
+    player_cards = [];
+    dealer = 0;
+    player = 0;
     buildDeck();
-    shuffleDeck();
+
+    player += drawCard(true) + drawCard(true);
+    dealer += drawCard(false);
+    player_turn = true;
+}
+
+function startGame() {
+    initialize_game();
+    document.getElementById("end-game").innerText = "";
 }
 
 function buildDeck(){
