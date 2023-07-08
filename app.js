@@ -105,9 +105,11 @@ function stand() {
 function check_turn() {
     if (!player_turn) {
         if (player > 21) {
+            document.getElementById("end-game").innerText = "LOSS";
             return;
         }
         if (player == 21) {
+            document.getElementById("end-game").innerText = "WIN";
             return;
         }
         while (dealer < 17) {
