@@ -97,9 +97,11 @@ function hit() {
             player_turn = false;
         }
     }
+    check_turn();
 }
 function stand() {
     player_turn = false;
+    check_turn();
 }
 
 function check_turn() {
@@ -137,5 +139,34 @@ function calculateScore(player_score, dealer_score) {
     else if (player_score == dealer_score) {
         document.getElementById("end-game").innerText = "TIE"
         load_dealer_cards();
+    }
+}
+
+function load_player_cards () {
+    const container = document.getElementById('player-cards');
+    // remove all current displayed player cards "remove and replace"
+    
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    // replace with current player_hand
+    for (let i = 0; i < player_cards.length; i++) {
+        const img = document.createElement('img');
+        img.src = "./Blackjack-cards/" + player_cards[i];
+        container.appendChild(img);
+    }
+}
+
+function load_dealer_cards () {
+    const container = document.getElementById('dealer-cards');
+    // remove all current displayed dealer cards "remove and replace"
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    // replace with current dealer_hand
+    for (let i = 0; i < dealer_cards.length; i++) {
+        const img = document.createElement('img');
+        img.src = "./Blackjack-cards/" + dealer_cards[i];
+        container.appendChild(img);
     }
 }
