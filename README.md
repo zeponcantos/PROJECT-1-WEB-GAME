@@ -58,4 +58,6 @@ There are issues with Ace cards value not properly assigning a value of 11 or 1 
 when a dealer hits an Ace they will be given the value of 11 instead of 1 causing the dealer to lose when it should still have the 
 option of hitting.
 
+Sometimes the player will win without the dealer showing their cards, my best guess is that the 2nd card the dealer has totals > 17 and the player's card is higher so a win it automatically applied. 
+
 
