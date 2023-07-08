@@ -98,6 +98,7 @@ function hit() {
         if (player >= 21) {
             player_turn = false;
         }
+        load_player_cards(); // load card on every player hit
     }
     check_turn();
 }
